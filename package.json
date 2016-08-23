@@ -1,0 +1,58 @@
+{
+  "name": "react-pagination-table",
+  "version": "1.0.0",
+  "description": "A table component for React with pagination",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test:watch": "NODE_ENV=test ./node_modules/.bin/mocha -w --recursive __test__/setup.js __test__/",
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha --recursive __test__/setup.js __test__/",
+    "start": "webpack-dev-server --devtool eval --progress --colors --hot",
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/addhome2001/react-paginate-table.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "pagination",
+    "status"
+  ],
+  "author": "addhome2001",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/addhome2001/react-paginate-table.git/issues"
+  },
+  "homepage": "https://github.com/addhome2001/react-paginate-table.git#readme",
+  "engines": {
+    "node": ">=4.4.7",
+    "npm": ">=2.15"
+  },
+  "dependencies": {
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-runtime": "^6.12.0",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.11.6",
+    "babel-runtime": "^6.11.6",
+    "chai": "^3.5.0",
+    "enzyme": "^2.4.1",
+    "jsdom": "^9.4.2",
+    "jsdom-global": "^2.0.0",
+    "mocha": "^3.0.2",
+    "react-addons-test-utils": "^15.3.1",
+    "sinon": "^1.17.5",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
