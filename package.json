@@ -1,6 +1,6 @@
 {
   "name": "react-pagination-table",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A table component for React with pagination",
   "main": "./lib/index.js",
   "scripts": {
@@ -12,20 +12,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/addhome2001/react-paginate-table.git"
+    "url": "git+https://github.com/addhome2001/react-pagination-table.git"
   },
   "keywords": [
     "react",
     "component",
     "pagination",
-    "status"
+    "status",
+    "table",
+    "data"
   ],
   "author": "addhome2001",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/addhome2001/react-paginate-table.git/issues"
+    "url": "https://github.com/addhome2001/react-pagination-table.git/issues"
   },
-  "homepage": "https://github.com/addhome2001/react-paginate-table.git#readme",
+  "homepage": "https://github.com/addhome2001/react-pagination-table.git#readme",
   "engines": {
     "node": ">=4.4.7",
     "npm": ">=2.15"
