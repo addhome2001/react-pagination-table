@@ -14,7 +14,9 @@ export default class TablePagination extends Component {
         nextPageText: PropTypes.string,
         prePageText: PropTypes.string,
         paginationClassName: PropTypes.string,
-        className: PropTypes.string
+        className: PropTypes.string,
+        perPageItemCount: PropTypes.number.isRequired,
+        totalCount: PropTypes.number.isRequired,
     };
 
     static defaultProps = {
@@ -24,8 +26,8 @@ export default class TablePagination extends Component {
         perPageItemCount: 0,
         totalCount: 0,
         className:'react-pagination-table',
-        nextPageText: "Prev",
-        prePageText: "Next",
+        nextPageText: "Next",
+        prePageText: "Prev",
         paginationClassName:"pagination-status"
     };
 
