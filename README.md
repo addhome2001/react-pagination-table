@@ -1,10 +1,13 @@
 # react-pagination-table
 
-> Table components for React with pagination
-
 [![Build Status](https://travis-ci.org/addhome2001/react-pagination-table.svg?branch=master)](https://travis-ci.org/addhome2001/react-pagination-table)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/addhome2001/react-pagination-table/badge.svg)](https://snyk.io/test/github/addhome2001/react-pagination-table)
+
+> Table components for React with pagination
+
+## [Demo](https://addhome2001.github.io/react-pagination-table/)
+
 
 ## Install
 ```
@@ -103,8 +106,6 @@ const App = ({Header, data}) =>
     </div>
 
 ````
-
-## [Demo](https://addhome2001.github.io/react-pagination-table/)
 
 ## API
 
