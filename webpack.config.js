@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -22,6 +23,11 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({
       minimize: false,
       debug: true,
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Example',
+      filename: 'index.html',
+      template: 'templates/index.ejs',
     }),
   ],
   resolve: {
