@@ -4,8 +4,8 @@
   "description": "A table component for React with pagination",
   "main": "./lib/index.js",
   "scripts": {
-    "test:watch": "./node_modules/.bin/mocha -w --recursive __test__/setup.js __test__/",
-    "test": "./node_modules/.bin/mocha --recursive __test__/setup.js __test__/",
+    "test:watch": "cross-env NODE_ENV=test ./node_modules/.bin/mocha -w --opts __test__/.mocharc __test__/",
+    "test": "cross-env NODE_ENV=test ./node_modules/.bin/mocha --opts __test__/.mocharc __test__/",
     "start": "webpack-dev-server --devtool eval --progress --colors",
     "build:demo": "cross-env NODE_ENV=production webpack -p --config ./webpack.prov.config.js",
     "compile": "babel -d lib/ src/",
