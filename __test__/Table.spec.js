@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import { expect } from 'chai';
 
 import DataTable from '../src/Table-Pagination';
-import Pagination from '../src/Pagination';
 
 const defaultData = [
   { name: 'Ben', age: 20, id: 0, phone: ['IPhone6', 'IPhone4'] },
@@ -62,13 +61,25 @@ describe('Test Table', () => {
     });
   });
 
+  it('should render correct information(prePageText, nextPageText)', () => {
+    const wrapper = shallowComponent(Object.assign(defaultTable, {
+      nextPageText: 'Next',
+      prePageText: 'Prev',
+    }));
+    const Pagination = wrapper.find('Pagination');
+
+    expect(Pagination.prop('nextPageText')).to.equal('Next');
+    expect(Pagination.prop('prePageText')).to.equal('Prev');
+    expect(Pagination.dive().find('a').first().text()).to.equal('Prev');
+    expect(Pagination.dive().find('a').last().text()).to.equal('Next');
+  });
+
   it('should render correct information(title, subTitle, header)', () => {
     const wrapper = shallowComponent(Object.assign(defaultTable, {
       title: 'Test Title',
       subTitle: 'Test subTitle',
     }));
-
-    const headers = wrapper.find('.table th').map(header => header.text());
+    const headers = wrapper.find('Header').prop('headers');
 
     expect(headers).to.eql(defaultTable.headers);
     expect(wrapper.find('h4').at(0).text()).to.equal('Test Title');
@@ -79,7 +90,7 @@ describe('Test Table', () => {
     const wrapper = shallowComponent(defaultTable);
 
     it('should render defaultTable without pass perPageItemCount and totalCount', () => {
-      expect(wrapper.find(Pagination)).to.have.length(0);
+      expect(wrapper.find('Pagination')).to.have.length(0);
     });
 
     it('should render all data', () => {
@@ -94,7 +105,7 @@ describe('Test Table', () => {
     const wrapper = shallowComponent(Object.assign(defaultTable, arrayOption));
 
     it('should render correct information(header)', () => {
-      const headers = wrapper.find('.table th').map(header => header.text());
+      const headers = wrapper.find('Header').prop('headers');
       expect(headers).to.eql(arrayOption.headers);
     });
 
@@ -130,8 +141,13 @@ describe('Test Table', () => {
     });
 
     it('should change page after modified activePage', () => {
+      expect(wrapper.find('tbody td').at(0).text()).to.equal('Ben');
       wrapper.setState({ activePage: 2 });
       expect(wrapper.find('tbody td').at(0).text()).to.equal('Raf');
+      wrapper.setState({ activePage: 3 });
+      expect(wrapper.find('tbody td').at(0).text()).to.equal('Echo');
+      wrapper.setState({ activePage: 4 });
+      expect(wrapper.find('tbody td').at(0).text()).to.equal('Ben');
     });
   });
 });
