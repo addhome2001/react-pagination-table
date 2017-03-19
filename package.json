@@ -1,6 +1,6 @@
 {
   "name": "react-pagination-table",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A table component for React with pagination",
   "main": "./lib/index.js",
   "scripts": {
