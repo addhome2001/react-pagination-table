@@ -1,10 +1,20 @@
+/* @flow */
 import React, { PropTypes, Component } from 'react';
 import Pagination from 'react-pagination-status';
 import Titles from './Components/Titles';
 import Header from './Components/Header';
 import Body from './Components/Body';
 
-export default class TablePagination extends Component {
+import type { TablePaginationProps, TablePaginationDefaultProps, TablePaginationState } from './types';
+
+export default class TablePagination extends Component
+<TablePaginationDefaultProps, TablePaginationProps, *> {
+
+  state: TablePaginationState;
+
+  defaultProps: TablePaginationDefaultProps;
+
+  handleChangePage: (status: number) => void
 
   static propTypes = {
     title: PropTypes.string,
@@ -33,7 +43,7 @@ export default class TablePagination extends Component {
     paginationClassName: 'pagination-status',
   };
 
-  constructor(props) {
+  constructor(props: TablePaginationProps) {
     super(props);
     this.state = {
       activePage: 0,
@@ -42,13 +52,13 @@ export default class TablePagination extends Component {
     this.handleChangePage = this.handleChangePage.bind(this);
   }
 
-  handleChangePage(status: number) {
+  handleChangePage(status: number): void {
     this.setState({
       activePage: status,
     });
   }
 
-  renderPartialTable(defaultTable) {
+  renderPartialTable(defaultTable: Array<React$Element<*>>) {
     const { perPageItemCount } = this.props;
     const { activePage, pageCount } = this.state;
     let start;
@@ -60,7 +70,7 @@ export default class TablePagination extends Component {
     return defaultTable.slice(start, start + perPageItemCount);
   }
 
-  renderTable(isPaginationTable) {
+  renderTable(isPaginationTable: boolean): Array<React$Element<*>> {
     const { arrayOption = [], columns, data } = this.props;
     const defaultTable = Body({ arrayOption, columns, data });
     return isPaginationTable
@@ -79,8 +89,8 @@ export default class TablePagination extends Component {
             nextPageText,
             prePageText } = this.props;
     const { pageCount } = this.state;
-    const isPaginationTable = pageCount > 1;
-    const Table = this.renderTable(isPaginationTable);
+    const isPaginationTable: boolean = pageCount > 1;
+    const Table: Array<React$Element<*>> = this.renderTable(isPaginationTable);
 
     return (
       <div className={ className }>

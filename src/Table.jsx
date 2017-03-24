@@ -1,9 +1,15 @@
+/* @flow */
 import React, { PropTypes, Component } from 'react';
 import Titles from './Components/Titles';
 import Header from './Components/Header';
 import Body from './Components/Body';
 
-export default class TableSimple extends Component {
+import type { TableProps, TableDefaultProps } from './types';
+
+export default class TableSimple extends Component
+<TableDefaultProps, TableProps, *> {
+
+  props: TableProps;
 
   static propTypes = {
     title: PropTypes.string,
@@ -11,7 +17,7 @@ export default class TableSimple extends Component {
     data: PropTypes.arrayOf(PropTypes.object).isRequired,
     columns: PropTypes.string.isRequired,
     headers: PropTypes.arrayOf(PropTypes.string).isRequired,
-    arrayOption: PropTypes.arrayOf(PropTypes.string),
+    arrayOption: PropTypes.arrayOf(PropTypes.string).isRequired,
     className: PropTypes.string,
   };
 
@@ -22,23 +28,22 @@ export default class TableSimple extends Component {
     className: 'react-pagination-table',
   };
 
-  renderTable() {
-    const { arrayOption, columns, data } = this.props;
-    return Body({ arrayOption, columns, data });
-  }
-
   render() {
     const {
       headers,
       className,
       title,
       subTitle,
+      arrayOption,
+      columns,
+      data,
     } = this.props;
-    const Table = this.renderTable();
+    const Table: Array<React$Element<*>> = Body({ arrayOption, columns, data });
+    const Title: Array<React$Element<*> | mixed> = Titles({ title, subTitle });
 
     return (
       <div className={ className }>
-        { Titles({ title, subTitle }) }
+        { Title }
         <table className="table">
           <Header headers={ headers } />
           <tbody>

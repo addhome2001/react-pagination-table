@@ -3,3 +3,4 @@ dist
 lib
 docs
 node_modules
+flow-typed

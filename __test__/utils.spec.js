@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-expressions */
 import { expect } from 'chai';
-import handleArrayOption from '../src/utils';
+import handleArrayOption from '../src/helpers';
 
 describe('Test Utils', () => {
   describe('handleArrayOption', () => {

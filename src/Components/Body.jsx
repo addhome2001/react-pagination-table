@@ -1,22 +1,35 @@
 /* eslint-disable react/no-array-index-key */
+
+/* @flow */
 import React, { PropTypes } from 'react';
-import handleArrayOption from '../utils';
+import handleArrayOption from '../helpers';
 
-const Body = ({ arrayOption = [], columns = '', data = [] } = {}) => {
-  const handleOptionVal = handleArrayOption(...arrayOption);
-  const arrProp = arrayOption[0];
-  let columnsArr;
+import type { BodyProps } from './types';
 
-  if (data.length <= 0) throw new Error('Can\'t reslove data property.');
+const Body = ({
+  columns,
+  data,
+  arrayOption,
+}: BodyProps) => {
+  const columnsArr: string[] = columns.split('.');
+  let handleOptionVal: mixed;
+  let arrProp: ?string;
 
-  if (columns.split && columns.length > 0) {
-    columnsArr = columns.split('.');
-  } else {
-    throw new Error('Can\'t reslove columns property.');
+  if (Array.isArray(arrayOption) && arrayOption.length > 0) {
+    handleOptionVal = handleArrayOption(...arrayOption);
+    arrProp = arrayOption[0];
+  }
+
+  if (columnsArr.length === 0) {
+    throw new Error('Can\'t reslove columns');
   }
 
   return data.map((single, i) => {
-    const optionResult = handleOptionVal && handleOptionVal(single);
+    let optionResult: ?string;
+    if (typeof handleOptionVal === 'function') {
+      optionResult = handleOptionVal(single);
+    }
+
     return (
       <tr key={ `row-${i}` }>
         {
@@ -40,8 +53,8 @@ Body.propTypes = {
       PropTypes.number,
     ]),
   ),
-  columns: PropTypes.string.isRequire,
-  data: PropTypes.arrayOf(PropTypes.object).isRequire,
+  columns: PropTypes.string.isRequired,
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Body;

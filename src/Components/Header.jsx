@@ -1,6 +1,9 @@
+/* @flow */
 import React, { PropTypes } from 'react';
 
-const Header = ({ headers = [] }) => {
+import type { HeaderProps } from './types';
+
+const Header = ({ headers = [] }: HeaderProps) => {
   if (Array.isArray(headers) && headers.length > 0) {
     return (
       <thead className="table-header">
