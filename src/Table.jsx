@@ -1,5 +1,6 @@
 /* @flow */
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Titles from './Components/Titles';
 import Header from './Components/Header';
 import Body from './Components/Body';

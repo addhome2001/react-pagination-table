@@ -1,5 +1,6 @@
 import { render } from 'react-dom';
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { TableSimple, TablePagination } from '../src';
 
 const defaultHeader = ['Name', 'Age', 'Size', 'Phone', 'Gender'];

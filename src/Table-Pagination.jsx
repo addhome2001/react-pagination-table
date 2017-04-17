@@ -1,5 +1,6 @@
 /* @flow */
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Pagination from 'react-pagination-status';
 import Titles from './Components/Titles';
 import Header from './Components/Header';

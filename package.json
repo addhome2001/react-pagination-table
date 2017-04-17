@@ -1,6 +1,6 @@
 {
   "name": "react-pagination-table",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A table component for React with pagination",
   "main": "./lib/index.js",
   "scripts": {
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "chai": "^3.5.0",
-    "enzyme": "^2.4.1",
+    "enzyme": "^2.8.2",
     "eslint": "^3.14.1",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-flowtype": "^2.30.3",
@@ -51,8 +51,9 @@
     "html-webpack-plugin": "^2.28.0",
     "jsdom": "^9.4.2",
     "jsdom-global": "^2.0.0",
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "react-pagination-status": "^1.1.2",
     "sinon": "^1.17.5",
     "webpack": "^2.2.1"

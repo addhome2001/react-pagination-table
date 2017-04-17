@@ -1,7 +1,8 @@
 /* eslint-disable react/no-array-index-key */
 
 /* @flow */
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import handleArrayOption from '../helpers';
 
 import type { BodyProps } from './types';
