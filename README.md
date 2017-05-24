@@ -6,9 +6,6 @@
 
 > Table components for React with pagination
 
-## [Demo](https://addhome2001.github.io/react-pagination-table/)
-
-
 ## Install
 ```
  npm install react-pagination-table
@@ -22,6 +19,8 @@ npm test
 ## Usage
 
 >The module contain `two` component, I will show you below.
+
+### [Demo](https://addhome2001.github.io/react-pagination-table/)
 
 If you get a data like this.
 
