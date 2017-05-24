@@ -10,7 +10,7 @@ const shallowComponent = (props = defaultProps) =>
   shallow(<div>{ Header(props) }</div>);
 
 describe('Test Components -> Header', () => {
-  it('should transfer all properties correct', () => {
+  it('convert all properties', () => {
     const headers = ['Name', 'Age', 'Address'];
     const wrapper = shallowComponent({ headers });
     expect(wrapper.find('th').at(0).text()).to.equal('Name');
@@ -18,7 +18,7 @@ describe('Test Components -> Header', () => {
     expect(wrapper.find('th').at(2).text()).to.equal('Address');
   });
 
-  it('should throw null if dose\'t provide headers', () => {
+  it('headers dose\'t exist', () => {
     const wrapper = shallowComponent();
     expect(wrapper.find('thead').length).is.equal(0);
   });

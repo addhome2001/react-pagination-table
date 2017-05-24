@@ -10,7 +10,7 @@ const shallowComponent = (props = defaultProps) =>
   shallow(<div>{ Body(props) }</div>);
 
 describe('Test Components -> Body', () => {
-  it('should transfer all properties correct', () => {
+  it('transfer all properties', () => {
     const data = [
       { name: 'Ben', age: 20, size: ['M', 'L'] },
       { name: 'Ken', age: 20, size: ['S', 'L'] },
@@ -23,7 +23,7 @@ describe('Test Components -> Body', () => {
     expect(findTd(2).children().map(n => n.text())).to.eql(['Jay', '20', 'M']);
   });
 
-  it('should transfer all properties to string if not provide arrayOption', () => {
+  it('arrayOption dose not exist ', () => {
     const data = [
       { name: 'Ben', age: 20, size: ['M', 'L'] },
       { name: 'Ken', age: 20, size: ['S', 'L'] },

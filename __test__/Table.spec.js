@@ -34,7 +34,7 @@ const shallowComponent = props =>
   shallow(<DataTable { ...props } data={ defaultData } />);
 
 describe('Test Table', () => {
-  it('should have props', () => {
+  it('correct props', () => {
     const wrapper = shallowComponent(defaultTable);
     const props = wrapper.instance().props;
     expect(props).eql({
@@ -61,7 +61,7 @@ describe('Test Table', () => {
     });
   });
 
-  it('should render correct information(prePageText, nextPageText)', () => {
+  it('information(prePageText, nextPageText)', () => {
     const wrapper = shallowComponent(Object.assign(defaultTable, {
       nextPageText: 'Next',
       prePageText: 'Prev',
@@ -74,7 +74,7 @@ describe('Test Table', () => {
     expect(Pagination.dive().find('a').last().text()).to.equal('Next');
   });
 
-  it('should render correct information(title, subTitle, header)', () => {
+  it('information(title, subTitle, header)', () => {
     const wrapper = shallowComponent(Object.assign(defaultTable, {
       title: 'Test Title',
       subTitle: 'Test subTitle',
@@ -89,11 +89,11 @@ describe('Test Table', () => {
   describe('Test defaultTable', () => {
     const wrapper = shallowComponent(defaultTable);
 
-    it('should render defaultTable without pass perPageItemCount and totalCount', () => {
+    it('without Pagination', () => {
       expect(wrapper.find('Pagination')).to.have.length(0);
     });
 
-    it('should render all data', () => {
+    it('render all data', () => {
       const tdData = wrapper.find('tbody tr').at(0).children('td').map(node => node.text());
 
       expect(wrapper.find('tbody tr')).to.have.length(defaultData.length);
@@ -104,12 +104,12 @@ describe('Test Table', () => {
   describe('Test arrayOption', () => {
     const wrapper = shallowComponent(Object.assign(defaultTable, arrayOption));
 
-    it('should render correct information(header)', () => {
+    it('information(header)', () => {
       const headers = wrapper.find('Header').prop('headers');
       expect(headers).to.eql(arrayOption.headers);
     });
 
-    it('should render arrayOption', () => {
+    it('with arrayOption', () => {
       expect(wrapper.find('tbody tr').at(0).find('td').last()
         .text()).to.equal('IPhone6 IPhone4');
       expect(wrapper.find('tbody tr').at(1).find('td').last()
@@ -136,11 +136,11 @@ describe('Test Table', () => {
   describe('Test paginationTable', () => {
     const wrapper = shallowComponent(Object.assign(defaultTable, paginationOption));
 
-    it('should render paginationTable by passing perPageItemCount and totalCount', () => {
+    it('with paginationTable', () => {
       expect(wrapper.find('.clearfix').children()).to.have.length(1);
     });
 
-    it('should change page after modified activePage', () => {
+    it('modified activePage', () => {
       expect(wrapper.find('tbody td').at(0).text()).to.equal('Ben');
       wrapper.setState({ activePage: 2 });
       expect(wrapper.find('tbody td').at(0).text()).to.equal('Raf');
