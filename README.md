@@ -71,7 +71,7 @@ const App = ({Header, data}) =>
             headers={ Header }
             //Tell the component what order you wanna render.  
             columns="name.age.size.phone.gender"
-            arrayOption={ ["size", 'all', ', '] }
+            arrayOption={ [["size", 'all', ', ']] }
         />
     </div>
 
@@ -100,7 +100,7 @@ const App = ({Header, data}) =>
             columns="name.age.size.phone.gender"
             perPageItemCount={ 5 }
             totalCount={ data.length }
-            arrayOption={ ["size", 'all', ' '] }
+            arrayOption={ [["size", 'all', ' ']] }
         />
     </div>
 
@@ -117,7 +117,7 @@ const App = ({Header, data}) =>
 | data            | the items you want to render   | Array        | isRequired                       |
 | columns  | the order of columns         | String        | isRequired                       |
 | headers         | table's header                     | Array        | isRequired                   |
-| arrayOption | ___ONLY support a single array [property, index, plus]___ <br>`property`: specific which of property is an array.<br> `index`: what index you want to get, can be a ___number___ or ___all___<br>`plus`: add character to every item | Array        | `empty`                   |
+| arrayOption | `property`: specific which of property is an array.<br> `index`: what index you want to get, can be a ___number___ or ___all___<br>`plus`: add character to every item | Array[]        | `empty`                   |
 | className         | the TableSimple className                     | String        | react-pagination-table                  |
 
 ### ___TablePagination___
