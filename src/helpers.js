@@ -5,7 +5,7 @@
  * @param  {String}        [prop='']        [key]
  * @param  {String|Number} [index='all'] [index]
  * @param  {String}        [plus='']     [plus]
- * @return {Function}
+ * @return {Function|Boolean}
  */
 export default function handleArrayOption(
   prop: string,

@@ -18,7 +18,9 @@ export default class TableSimple extends Component
     data: PropTypes.arrayOf(PropTypes.object).isRequired,
     columns: PropTypes.string.isRequired,
     headers: PropTypes.arrayOf(PropTypes.string).isRequired,
-    arrayOption: PropTypes.arrayOf(PropTypes.string).isRequired,
+    arrayOption: PropTypes.arrayOf(
+      PropTypes.arrayOf(PropTypes.string),
+    ),
     className: PropTypes.string,
   };
 

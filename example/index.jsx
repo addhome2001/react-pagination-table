@@ -38,7 +38,7 @@ const App = ({ Header, data }) =>
       columns="name.age.size.phone.gender"
       perPageItemCount={ 5 }
       totalCount={ data.length }
-      arrayOption={ ['size', 'all', ' '] }
+      arrayOption={ [['size', 'all', ' ']] }
       nextPageText="Next"
       prePageText="Prev"
     />
@@ -49,7 +49,7 @@ const App = ({ Header, data }) =>
       headers={ Header }
       data={ data }
       columns="name.age.size.phone.gender"
-      arrayOption={ ['size', 'all', ', '] }
+      arrayOption={ [['size', 'all', ', ']] }
     />
   </div>;
 

@@ -1,6 +1,6 @@
 {
   "name": "react-pagination-table",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "A table component for React with pagination",
   "main": "./lib/index.js",
   "scripts": {
@@ -54,7 +54,7 @@
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-pagination-status": "^1.1.2",
+    "react-pagination-status": "^1.1.3",
     "sinon": "^1.17.5",
     "webpack": "^2.2.1"
   },

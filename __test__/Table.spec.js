@@ -25,7 +25,7 @@ const paginationOption = {
 };
 
 const arrayOption = {
-  arrayOption: ['phone', 'all', ' '],
+  arrayOption: [['phone', 'all', ' ']],
   columns: 'name.age.id.phone',
   headers: ['Name', 'Age', 'ID', 'Phone'],
 };
@@ -40,7 +40,7 @@ describe('Test Table', () => {
     expect(props).eql({
       columns: 'name.age.id.phone',
       headers: ['Name', 'Age', 'ID', 'Phone'],
-      arrayOption: ['phone', 'all', ' '],
+      arrayOption: [['phone', 'all', ' ']],
       perPageItemCount: 2,
       totalCount: 7,
       data: [
@@ -123,7 +123,7 @@ describe('Test Table', () => {
       expect(wrapper.find('tbody tr').at(6).find('td').last()
         .text()).to.equal('Desire 820 J7');
 
-      wrapper.setProps({ arrayOption: ['phone', '0', ' '] });
+      wrapper.setProps({ arrayOption: [['phone', '0', ' ']] });
       expect(wrapper.find('tbody tr').at(2).find('td').last()
         .text()).to.equal('Desire 820');
       expect(wrapper.find('tbody tr').at(3).find('td').last()

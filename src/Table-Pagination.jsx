@@ -23,7 +23,9 @@ export default class TablePagination extends Component
     data: PropTypes.arrayOf(PropTypes.object).isRequired,
     columns: PropTypes.string.isRequired,
     headers: PropTypes.arrayOf(PropTypes.string).isRequired,
-    arrayOption: PropTypes.arrayOf(PropTypes.string),
+    arrayOption: PropTypes.arrayOf(
+      PropTypes.arrayOf(PropTypes.string),
+    ),
     nextPageText: PropTypes.string,
     prePageText: PropTypes.string,
     paginationClassName: PropTypes.string,
