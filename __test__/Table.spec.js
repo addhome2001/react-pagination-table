@@ -1,8 +1,11 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import { expect } from 'chai';
 
 import DataTable from '../src/Table-Pagination';
+
+configure({ adapter: new Adapter() });
 
 const defaultData = [
   { name: 'Ben', age: 20, id: 0, phone: ['IPhone6', 'IPhone4'] },
