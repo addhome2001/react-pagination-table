@@ -8,21 +8,22 @@
 
 ## Install
 ```
- npm install react-pagination-table
+ npm install --save react-pagination-table
 ```
 
-## Test
-```
-npm test
-```
+## Migration
+After the version `2.x`, the behavior of the `className` and `paginationClassName` props will be a little different. For a better way to architect your CSS, the className of the specific components will be more maintainable.
+
+> The [example](https://github.com/addhome2001/react-pagination-table/blob/master/example) or the [className](https://github.com/addhome2001/react-pagination-table#className) section will be helpful to you.
+
 
 ## Usage
 
->The module contain `two` component, I will show you below.
+>The module contains `two` components, includes ___TableSimple___、___TablePagination___
 
 ### [Demo](https://addhome2001.github.io/react-pagination-table/)
 
-If you get a data like this.
+There is a data set.
 
 ````javascript
 
@@ -52,7 +53,7 @@ const data = [
 
 ___TableSimple___
 
->It's just a simple table component.
+>Simple table component.
 
 ````javascript
 import { render } from 'react-dom';
@@ -69,7 +70,7 @@ const App = ({Header, data}) =>
             subTitle="Sub Title"
             data={ data }
             headers={ Header }
-            //Tell the component what order you wanna render.  
+            //Tell the component what order you wanna render.
             columns="name.age.size.phone.gender"
             arrayOption={ [["size", 'all', ', ']] }
         />
@@ -80,8 +81,7 @@ const App = ({Header, data}) =>
 
 ___TablePagination___
 
->Simple table with pagination feature.
-
+>Simple table with pagination.
 
 ````javascript
 import { render } from 'react-dom';
@@ -106,6 +106,21 @@ const App = ({Header, data}) =>
 
 ````
 
+## className
+The `react-pagination-table`(**className**) and `pagination-status`(**paginationClassName**) is the default className and **prefix**. You can pass custom name with the `className` prop.
+
+> In addition, setting the specific components to the differences styles and status by these **className**
+>- {**className**} the wrapper of the Component
+>- {**className**}__title
+>- {**className**}__sub-title
+>- {**className**}__header
+>- {**className**}__table(the `<table />` tag)
+>- {**paginationClassName**} the wrapper of the Pagination
+>- {**paginationClassName**}__item(the `<li />>` tags)
+>- {**paginationClassName**}__btn(the page button)
+>- {**paginationClassName**}__btn--active(the activated page button)
+>- {**paginationClassName**}__btn--disable
+
 ## API
 
 ### ___TableSimple___
@@ -117,7 +132,7 @@ const App = ({Header, data}) =>
 | data            | the items you want to render   | Array        | isRequired                       |
 | columns  | the order of columns         | String        | isRequired                       |
 | headers         | table's header                     | Array        | isRequired                   |
-| arrayOption | `property`: specific which of property is an array.<br> `index`: what index you want to get, can be a ___number___ or ___all___<br>`plus`: add character to every item | Array[]        | `empty`                   |
+| arrayOption | `property`: specific which property is array.<br> `index`: the index of the array, can be a ___number___ or ___all___<br>`plus`: add character between items | Array[]        | `empty`                   |
 | className         | the TableSimple className                     | String        | react-pagination-table                  |
 
 ### ___TablePagination___
@@ -126,24 +141,24 @@ const App = ({Header, data}) =>
 
 | Props        | Description                        | Type          | Default                  |
 |------------------|------------------------------------|---------------|--------------------------|
-| totalCount            | items total count or length                 | Number        | isRequired                       |
-| perPageItemCount  | items are shown per page           | Number        | isRequired                       |
+| totalCount            | the length of the items                 | Number        | isRequired                       |
+| perPageItemCount  | the numbers of the items on per page           | Number        | isRequired                       |
 | nextPageText         | the text of `nextPage` button                     | String        | 下一頁                    |
 | prePageText         | the text of `previousPage` button                     | String        | 上一頁                    |
-| paginationClassName         | the pagination className                | String        | pagination-status                   |
+| paginationClassName         | the pagination className                | String        | pagination-status |
+| partialPageCount         | the numbers of the page buttons                     | Number        | 5                  |
 
 ## Example
 ```
 npm start
 ```
 
-By default, the web server will run on the `8000` port after run the command above. Then you can access `localhost:8000` to see the demo.
+By default, the example is on the `8000` port after run the command above. Then you can access `localhost:8000` to see the demo.
 
-## Style
-By default,`TableSimple` and `TablePagination` all have ___react-pagination-table___ className. In addition to the `TablePagination` component have ___pagination-status___ className for pagination. You can pass
-custom className as a string using the `className` prop.
-
->In addition, the activated page(`<li>`) button will be added `.active`  class and it's up to you to modify the default css.
+## Test
+```
+npm test
+```
 
 ### Other useful component
 [react-pagination-status](https://www.npmjs.com/package/react-pagination-status)
