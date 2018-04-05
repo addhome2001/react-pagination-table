@@ -8,12 +8,14 @@ export type BodyProps = {
 }
 
 /* Title Component */
-export type TitleProps = {
+export type TitlesProps = {
   title: ?string,
   subTitle: ?string,
+  className: string,
 }
 
 /* Header Component */
 export type HeaderProps = {
   headers: string[],
+  className: string,
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, configure } from 'enzyme';
+import { shallow, mount, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { expect } from 'chai';
 
@@ -36,6 +36,9 @@ const arrayOption = {
 const shallowComponent = props =>
   shallow(<DataTable { ...props } data={ defaultData } />);
 
+const mountComponent = props =>
+  mount(<DataTable { ...props } data={ defaultData } />);
+
 describe('Test Table', () => {
   it('correct props', () => {
     const wrapper = shallowComponent(defaultTable);
@@ -45,6 +48,7 @@ describe('Test Table', () => {
       headers: ['Name', 'Age', 'ID', 'Phone'],
       arrayOption: [['phone', 'all', ' ']],
       perPageItemCount: 2,
+      partialPageCount: 5,
       totalCount: 7,
       data: [
         { name: 'Ben', age: 20, id: 0, phone: ['IPhone6', 'IPhone4'] },
@@ -65,7 +69,7 @@ describe('Test Table', () => {
   });
 
   it('information(prePageText, nextPageText)', () => {
-    const wrapper = shallowComponent(Object.assign(defaultTable, {
+    const wrapper = mountComponent(Object.assign(defaultTable, {
       nextPageText: 'Next',
       prePageText: 'Prev',
     }));
@@ -73,8 +77,8 @@ describe('Test Table', () => {
 
     expect(Pagination.prop('nextPageText')).to.equal('Next');
     expect(Pagination.prop('prePageText')).to.equal('Prev');
-    expect(Pagination.dive().find('a').first().text()).to.equal('Prev');
-    expect(Pagination.dive().find('a').last().text()).to.equal('Next');
+    expect(Pagination.find('.pagination-status__btn').first().text()).to.equal('Prev');
+    expect(Pagination.find('.pagination-status__btn').last().text()).to.equal('Next');
   });
 
   it('information(title, subTitle, header)', () => {

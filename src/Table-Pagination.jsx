@@ -31,6 +31,7 @@ export default class TablePagination extends Component
     paginationClassName: PropTypes.string,
     className: PropTypes.string,
     perPageItemCount: PropTypes.number.isRequired,
+    partialPageCount: PropTypes.number,
     totalCount: PropTypes.number.isRequired,
   };
 
@@ -39,6 +40,7 @@ export default class TablePagination extends Component
     subTitle: '',
     arrayOption: [''],
     perPageItemCount: 0,
+    partialPageCount: 5,
     totalCount: 0,
     className: 'react-pagination-table',
     nextPageText: 'Next',
@@ -84,6 +86,7 @@ export default class TablePagination extends Component
   render() {
     const { headers,
             perPageItemCount,
+            partialPageCount,
             totalCount,
             className,
             paginationClassName,
@@ -97,9 +100,9 @@ export default class TablePagination extends Component
 
     return (
       <div className={ className }>
-        { Titles({ title, subTitle }) }
-        <table className="table">
-          <Header headers={ headers } />
+        { Titles({ title, subTitle, className }) }
+        <table className={ `${className}__table` }>
+          <Header className={ className } headers={ headers } />
           <tbody>
             { Table }
           </tbody>
@@ -111,6 +114,7 @@ export default class TablePagination extends Component
                 handleChangePage={ this.handleChangePage }
                 activePage={ this.state.activePage }
                 totalCount={ totalCount }
+                partialPageCount={ partialPageCount }
                 perPageItemCount={ perPageItemCount }
                 className={ paginationClassName }
                 nextPageText={ nextPageText }
