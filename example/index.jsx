@@ -36,7 +36,8 @@ const App = ({ Header, data }) =>
       headers={ Header }
       data={ data }
       columns="name.age.size.phone.gender"
-      perPageItemCount={ 5 }
+      perPageItemCount={ 2 }
+      partialPageCount={ 3 }
       totalCount={ data.length }
       arrayOption={ [['size', 'all', ' ']] }
       nextPageText="Next"
