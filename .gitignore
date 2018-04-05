@@ -28,6 +28,7 @@ npm-debug.log
 /tmp/
 /vendor/
 /dir/
+/lib/
 _gh_pages
 
 # OS or Editor folders
