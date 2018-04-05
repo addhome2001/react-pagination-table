@@ -37,8 +37,7 @@
   },
   "homepage": "https://github.com/addhome2001/react-pagination-table.git#readme",
   "engines": {
-    "node": ">=4.4.7",
-    "npm": ">=2.15"
+    "node": ">=6.2.2"
   },
   "dependencies": {
     "chai": "^3.5.0",
