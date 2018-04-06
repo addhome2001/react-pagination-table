@@ -14,7 +14,7 @@
 ## Migration
 After the version `2.x`, the behavior of the `className` and `paginationClassName` props will be a little different. For a better way to architect your CSS, the className of the specific components will be more maintainable.
 
-> The [example](https://github.com/addhome2001/react-pagination-table/blob/master/example) or the [className](https://github.com/addhome2001/react-pagination-table#className) section will be helpful to you.
+> The [example](https://github.com/addhome2001/react-pagination-table/blob/master/example) or the [className](https://github.com/addhome2001/react-pagination-table#classname) section will be helpful to you.
 
 
 ## Usage
