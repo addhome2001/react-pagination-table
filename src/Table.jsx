@@ -42,13 +42,13 @@ export default class TableSimple extends Component
       data,
     } = this.props;
     const Table: Array<React$Element<*>> = Body({ arrayOption, columns, data });
-    const Title: Array<React$Element<*> | mixed> = Titles({ title, subTitle });
+    const Title: Array<React$Element<*> | mixed> = Titles({ title, subTitle, className });
 
     return (
       <div className={ className }>
         { Title }
-        <table className="table">
-          <Header headers={ headers } />
+        <table className={ `${className}__table` }>
+          <Header headers={ headers } className={ className } />
           <tbody>
             { Table }
           </tbody>

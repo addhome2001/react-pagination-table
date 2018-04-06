@@ -1,0 +1,75 @@
+.react-pagination-table {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    margin-bottom: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.react-pagination-table__sub-title {
+    float: right;
+}
+
+.react-pagination-table__title,
+.react-pagination-table__sub-title {
+    display: inline-block;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1;
+    font-weight:100;
+    padding: 20px 20px 10px;
+}
+
+.react-pagination-table__header {
+    background: #e8e8e8;
+}
+
+.react-pagination-table__table {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.pagination-status {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.pagination-status__item {
+    display: inline;
+}
+
+.pagination-status .pagination-status__btn {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.pagination-status .pagination-status__btn:focus {
+    outline: none;
+}
+
+.pagination-status .pagination-status__btn--active,
+.pagination-status .pagination-status__btn:hover {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+    cursor: pointer;
+}
+
+.pagination-status .pagination-status__btn--disable,
+.pagination-status .pagination-status__btn--disable:hover {
+    color: #d0d0d0;
+    cursor: default;
+    border-color: #d0d0d0;
+    background-color: #fff;
+}

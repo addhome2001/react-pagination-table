@@ -10,8 +10,9 @@ export type TablePaginationProps = {
   nextPageText: ?string,
   prePageText: ?string,
   paginationClassName: string,
-  className: ?string,
+  className: string,
   perPageItemCount: number,
+  partialPageCount?: number,
   totalCount: number,
 }
 
@@ -20,6 +21,7 @@ export type TablePaginationDefaultProps = {
   subTitle: string,
   arrayOption: string[],
   perPageItemCount: number,
+  partialPageCount: number,
   totalCount: number,
   className: string,
   nextPageText: string,
@@ -40,7 +42,7 @@ export type TableProps = {
   columns: string,
   headers: string[],
   arrayOption: ?string[],
-  className: ?string,
+  className: string,
 }
 
 export type TableDefaultProps = {
