@@ -107,9 +107,9 @@ const App = ({Header, data}) =>
 ````
 
 ## className
-The `react-pagination-table`(**className**) and `pagination-status`(**paginationClassName**) is the default className and **prefix**. You can pass custom name with the `className` prop.
+The `react-pagination-table`(**className**) and `pagination-status`(**paginationClassName**) is the default className and **prefix**. You can pass custom name by the `className` and `paginationClassName` props.
 
-> In addition, setting the specific components to the differences styles and status by these **className**
+> In addition, setting the specific components to the differences styles and status by these **class**
 >- {**className**} the wrapper of the Component
 >- {**className**}__title
 >- {**className**}__sub-title
