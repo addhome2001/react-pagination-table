@@ -116,7 +116,7 @@ The `react-pagination-table`(**className**) and `pagination-status`(**pagination
 >- {**className**}__header
 >- {**className**}__table(the `<table />` tag)
 >- {**paginationClassName**} the wrapper of the Pagination
->- {**paginationClassName**}__item(the `<li />>` tags)
+>- {**paginationClassName**}__item(the `<li />` tags)
 >- {**paginationClassName**}__btn(the page button)
 >- {**paginationClassName**}__btn--active(the activated page button)
 >- {**paginationClassName**}__btn--disable
