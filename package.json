@@ -60,7 +60,7 @@
     "react-pagination-status": "^2.0.0",
     "sinon": "^1.17.5",
     "webpack": "^2.2.1",
-    "snyk": "^1.41.1"
+    "snyk": "^1.78.0"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
