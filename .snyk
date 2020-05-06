@@ -1,8 +1,35 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.1
+version: v1.14.1
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:debug:20170905':
     - react-pagination-status > webpack-dev-server > serve-index > debug:
         patched: '2017-09-27T22:50:05.112Z'
+  SNYK-JS-LODASH-567746:
+    - enzyme > lodash:
+        patched: '2020-05-06T02:43:11.107Z'
+    - enzyme-adapter-react-16 > lodash:
+        patched: '2020-05-06T02:43:11.107Z'
+    - eslint > lodash:
+        patched: '2020-05-06T02:43:11.107Z'
+    - html-webpack-plugin > lodash:
+        patched: '2020-05-06T02:43:11.107Z'
+    - enzyme > cheerio > lodash:
+        patched: '2020-05-06T02:43:11.107Z'
+    - enzyme-adapter-react-16 > enzyme-adapter-utils > lodash:
+        patched: '2020-05-06T02:43:11.107Z'
+    - eslint > inquirer > lodash:
+        patched: '2020-05-06T02:43:11.107Z'
+    - eslint > table > lodash:
+        patched: '2020-05-06T02:43:11.107Z'
+    - snyk > inquirer > lodash:
+        patched: '2020-05-06T02:43:11.107Z'
+    - snyk > snyk-resolve-deps > lodash:
+        patched: '2020-05-06T02:43:11.107Z'
+    - webpack > async > lodash:
+        patched: '2020-05-06T02:43:11.107Z'
+    - webpack > watchpack > async > lodash:
+        patched: '2020-05-06T02:43:11.107Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2020-05-06T02:43:11.107Z'
