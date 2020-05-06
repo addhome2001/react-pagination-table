@@ -16,7 +16,7 @@
     "all": "npm run compile && npm run build:demo",
     "snyk-protect": "snyk protect",
     "precommit": "npm run validate",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "yarn run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -60,7 +60,7 @@
     "react-pagination-status": "^2.0.0",
     "sinon": "^1.17.5",
     "webpack": "^2.2.1",
-    "snyk": "^1.41.1"
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
