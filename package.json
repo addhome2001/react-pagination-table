@@ -43,7 +43,7 @@
     "chai": "^3.5.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^3.14.1",
+    "eslint": "^7.3.0",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-flowtype": "^2.30.3",
     "eslint-plugin-import": "^2.2.0",
@@ -59,8 +59,8 @@
     "react-dom": "^16.2.0",
     "react-pagination-status": "^2.0.0",
     "sinon": "^1.17.5",
-    "webpack": "^2.2.1",
-    "snyk": "^1.41.1"
+    "webpack": "^4.0.0",
+    "snyk": "^1.685.0"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
