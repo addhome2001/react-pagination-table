@@ -4268,9 +4268,10 @@ react-dom@^16.2.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-pagination-status@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/react-pagination-status/-/react-pagination-status-1.2.1.tgz#2c72b071c966b44d0b910d4e501510162b08e7ba"
+react-pagination-status@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-pagination-status/-/react-pagination-status-2.0.0.tgz#4dbb249c5d4694d8bed876a1bd23444998092421"
+  integrity sha512-xHFWIbNUixOjO3PR6uIs0SEEGTiv8lJCPhDwcDCCeSNglhDUZaleMrAWFzjTESKsBUicMgpDNpV2b1WUxNTB7g==
   dependencies:
     chai "^3.5.0"
     enzyme "^3.3.0"
@@ -4281,6 +4282,7 @@ react-pagination-status@^1.2.1:
     react "^16.2.0"
     react-dom "^16.2.0"
     sinon "^1.17.5"
+    snyk "^1.41.1"
     webpack "^2.2.1"
     webpack-dev-server "^2.3.0"
 
@@ -4905,6 +4907,11 @@ snyk@^1.41.1:
     update-notifier "^0.5.0"
     url "^0.11.0"
     uuid "^3.0.1"
+
+snyk@^1.465.0:
+  version "1.908.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.908.0.tgz#dee8aac7b9c80608dc258e17a9c8de129e29957e"
+  integrity sha512-fti0j50hDdDBwrwVfLGaHN+xCBvktpxDYIqpJ9pk0IMgQrxBM7fum6l5Pim+Jaq7tZASD3S3p+7RL4JWsS3O/A==
 
 sockjs-client@1.1.1:
   version "1.1.1"
