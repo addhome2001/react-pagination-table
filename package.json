@@ -51,7 +51,7 @@
     "eslint-plugin-react": "^6.9.0",
     "flow-bin": "^0.41.0",
     "flow-typed": "^2.0.0",
-    "html-webpack-plugin": "^2.28.0",
+    "html-webpack-plugin": "^5.0.0",
     "jsdom": "^9.4.2",
     "jsdom-global": "^2.0.0",
     "prop-types": "^15.5.8",
@@ -59,7 +59,7 @@
     "react-dom": "^16.2.0",
     "react-pagination-status": "^2.0.0",
     "sinon": "^1.17.5",
-    "webpack": "^2.2.1",
+    "webpack": "^5.0.0",
     "snyk": "^1.41.1"
   },
   "devDependencies": {
