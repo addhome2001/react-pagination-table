@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@snyk/protect@^1.1207.0":
+  version "1.1207.0"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1207.0.tgz#1fa34a07987100b43faf94e04aaaaf528b14a437"
+  integrity sha512-ghRa5S8aH8z9I3WGbl4/ISqkNUOmiNLG1XWkN7SyCsd1UZmY0WZDiKMLU1ZQrPQQdrCPyC+jwpRkKwDdfFLVqw==
+
 "@types/node@*":
   version "9.3.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-9.3.0.tgz#3a129cda7c4e5df2409702626892cb4b96546dd5"
@@ -4268,9 +4273,10 @@ react-dom@^16.2.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-pagination-status@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/react-pagination-status/-/react-pagination-status-1.2.1.tgz#2c72b071c966b44d0b910d4e501510162b08e7ba"
+react-pagination-status@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-pagination-status/-/react-pagination-status-2.0.0.tgz#4dbb249c5d4694d8bed876a1bd23444998092421"
+  integrity sha512-xHFWIbNUixOjO3PR6uIs0SEEGTiv8lJCPhDwcDCCeSNglhDUZaleMrAWFzjTESKsBUicMgpDNpV2b1WUxNTB7g==
   dependencies:
     chai "^3.5.0"
     enzyme "^3.3.0"
@@ -4281,6 +4287,7 @@ react-pagination-status@^1.2.1:
     react "^16.2.0"
     react-dom "^16.2.0"
     sinon "^1.17.5"
+    snyk "^1.41.1"
     webpack "^2.2.1"
     webpack-dev-server "^2.3.0"
 
